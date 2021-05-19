@@ -1,15 +1,18 @@
 body {
-    padding: 20;
+  height: 625px;
+    padding: 20px;
     text-align: center;
-    height: 100vh;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+   
   }
   
   .game-intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+     
+     background-color: grey;
 }
   
   .game-intro p {
@@ -36,8 +39,5 @@ body {
     margin-bottom: 20px;
   }
   
-  #game-board {
-      float: left;
-      padding: 20px 0px;
-  }
+  
   
