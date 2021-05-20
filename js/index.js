@@ -2,14 +2,15 @@ window.addEventListener('load', () => {
     const game = new Game('game');
   
     document.getElementById("start-button").onclick = () => {
-      game.startGame()
+      game.start()
+
     };
   
-    /*document.addEventListener("keydown", () => {
+    document.addEventListener("keydown", () => {
       game.onKeyEvent(event);
     });
   
     document.addEventListener("keyup", () => {
       game.onKeyEvent(event);
-    });*/
+    });
   });
