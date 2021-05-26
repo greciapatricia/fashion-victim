@@ -14,7 +14,7 @@ class Cutegirl {
     this.vx = 0;
 
     this.img = new Image();
-    this.img.src = "./images/cutegirl.sprite.png";
+    this.img.src = "./images/cutegirl.sprite.png" ;
     this.img.isReady = false;
 
     this.img.horizontalFrames = 20;
@@ -48,6 +48,7 @@ class Cutegirl {
 
   draw() {
     if (this.isReady()) {
+
       this.ctx.drawImage(
         this.img,
         this.img.horizontalFrameIndex * this.img.frameWidth,
@@ -61,6 +62,7 @@ class Cutegirl {
       );
 
       this.img.drawCount++;
+      this.animate()
       
     }
   }
@@ -82,8 +84,11 @@ class Cutegirl {
 
   move() {
     if (this.movements.right) {
+      this.img.src = "./images/cutegirl.sprite.png";
       this.vx = SPEED;
+
     } else if (this.movements.left) {
+      this.img.src = "./images/cutegirl-left.sprite.png";
       this.vx = -SPEED;
     } else {
       this.vx = 0;
@@ -113,16 +118,25 @@ class Cutegirl {
 
   animateSprite() {
 
-    if (this.img.verticalFrameIndex !== 1) {
-      this.img.verticalFrameIndex = 1;
+    if (this.img.verticalFrameIndex !== 0) {
+      this.img.verticalFrameIndex = 0;
       this.img.horizontalFrameIndex = 0;
-    } else if (this.img.drawCount % MOVEMENT_FRAMES === 0) {
-      if (this.img.horizontalFrameIndex >= this.img.horizontalFrames - 1) {
+    } else if (this.img.width % MOVEMENT_FRAMES === 0) {
+      if (this.img.horizontalFrameIndex >= this.img.horizontalFrames - 5) {
         this.img.horizontalFrameIndex = 0;
       } else {
         this.img.horizontalFrameIndex++;
       }
       this.img.drawCount = 0;
     }
+  }
+
+  collidesWith(element) {
+    return (
+      this.x < element.x + element.width &&
+      this.x + this.width > element.x &&
+      this.y < element.y + element.height &&
+      this.y + this.height > element.y
+    );
   }
 }

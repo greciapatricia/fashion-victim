@@ -1,16 +1,15 @@
-window.addEventListener('load', () => {
-    const game = new Game('game');
-  
-    document.getElementById("start-button").onclick = () => {
-      game.start()
+window.addEventListener("load", () => {
+  const game = new Game("game");
 
-    };
-  
-    document.addEventListener("keydown", () => {
-      game.onKeyEvent(event);
-    });
-  
-    document.addEventListener("keyup", () => {
-      game.onKeyEvent(event);
-    });
+  document.getElementById("start-button").onclick = () => {
+    game.start();
+  };
+
+  document.addEventListener("keydown", () => {
+    game.onKeyEvent(event);
   });
+
+  document.addEventListener("keyup", () => {
+    game.onKeyEvent(event);
+  });
+});
