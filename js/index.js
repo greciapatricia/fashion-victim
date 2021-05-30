@@ -1,10 +1,10 @@
 window.addEventListener("load", () => {
   const game = new Game("game");
-
+  
   document.getElementById("start-button").onclick = () => {
     game.start();
   };
-
+  
   document.addEventListener("keydown", () => {
     game.onKeyEvent(event);
   });

@@ -11,7 +11,7 @@ class Background {
     this.vx = -2;
 
     this.img = new Image();
-    this.img.src = "./images/full-background.png";
+    this.img.src = "./images/back-brands.png";
     this.img.isReady = false;
     this.img.onload = () => {
       this.img.isReady = true;

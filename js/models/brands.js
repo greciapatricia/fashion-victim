@@ -5,8 +5,8 @@ class Brand {
     this.x = x;
     this.y = y;
 
-    this.width = 50;
-    this.height = 50;
+    this.width = 70;
+    this.height = 70;
 
     this.vy = vy;
 
