@@ -12,7 +12,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background: url("../images/final.png");
+  background: url("../images/final.gif");
   background-size: cover;
   background-repeat: no-repeat;
 }

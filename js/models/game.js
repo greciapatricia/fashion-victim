@@ -219,7 +219,7 @@ class Game {
       this.levelTwo();
     } else if (this.points === 100) {
       this.levelThree();
-    } else if (this.points === 20) {
+    } else if (this.points === 150) {
       this.youWin();
       this.sounds.theme.pause();
       this.sounds.winner.play();
